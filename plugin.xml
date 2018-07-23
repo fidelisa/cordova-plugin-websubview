@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin
+    id="cordova-plugin-websubview"
+    version="1.4.7"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+
+  <name>Websubview</name>
+
+  <author>Yann Pelud</author>
+
+  <description>
+    Add sub view to your cordova app
+  </description>
+
+  <keywords>InAppBrowser, InAppSafariBrowser, Safari, Safari ViewController</keywords>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module name="WebSubView" src="www/WebSubView.js">
+    <clobbers target="WebSubView"/>
+  </js-module>
+
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="WebSubView">
+        <param name="ios-package" value="WebSubView"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/WebSubView.h"/>
+    <source-file src="src/ios/WebSubView.m"/>
+  </platform>
+
+   <platform name="android">
+    <config-file target="config.xml" parent="/*">
+      <feature name="WebSubView">
+        <param name="android-package" value="com.websubview.WebSubViewPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    
+    <framework src="build/android/WebSubViewPlugin-java17.gradle" custom="true" type="gradleReference" />
+    <framework src="com.android.support:customtabs:23.2.0" />
+    <source-file src="src/android/WebSubViewPlugin.java"                target-dir="src/com/websubview" />
+
+  </platform>
+  
+</plugin>

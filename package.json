@@ -1,0 +1,37 @@
+{
+  "name": "cordova-plugin-websubview",
+  "version": "1.0.0",
+  "description": "Add sub view to your cordova app",
+  "cordova": {
+    "id": "cordova-plugin-websubview",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fidelisa/cordova-plugin-websubview.git"
+  },
+  "keywords": [
+    "InAppBrowser",
+    "InAppSafariBrowser",
+    "Safari",
+    "Safari ViewController",
+    "Chrome Custom Tabs",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Fidelisa (https://github.com/fidelisa)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fidelisa/cordova-plugin-websubview.git/issues"
+  },
+  "homepage": "https://github.com/fidelisa/cordova-plugin-websubview.git#readme"
+}
